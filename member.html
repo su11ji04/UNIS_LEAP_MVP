@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>혜택나우</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif !important;
+      margin: 0;
+      padding-left: 20px;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #f4f4f9;
+      color: #027bd6;
+      padding-left: 35px;
+      text-align: left;
+      font-size: 25px;
+      margin: 0;
+    }
+    #logo h1 {
+      font-family: Arial, sans-serif !important;
+      color: #027bd6;
+    }
+    .no-underline {
+      text-decoration: none;
+    }
+    nav {
+      display: flex !important;
+      text-align: left;
+      margin: 0;
+      position: relative; /* relative로 설정하여 위치 조정 가능 */
+      top: -25px; /* 네비게이션 영역을 10px 위로 올림 */
+    }
+    nav a {
+      text-decoration: none;
+      color: #027bd6;
+      margin: 0;
+
+    }
+    #menu > li {
+      list-style-type: none;
+      text-decoration: none;
+      float: left;
+      margin-right: 40px;
+      font-size: 25px;
+
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    nav a.mb {
+      color: #222222;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div id="logo">
+    <a href="main.html" class="no-underline">
+      <h1> 혜택나우 </h1>
+    </a>
+  </div>
+</header>
+<nav>
+  <ul id="menu">
+    <li><a href="main.html">About Service</a></li>
+    <li><a href="service.html" class="sv">Service Simulation</a></li>
+    <li><a href="member.html" class="mb">Member</a></li>
+  </ul>
+</nav>
