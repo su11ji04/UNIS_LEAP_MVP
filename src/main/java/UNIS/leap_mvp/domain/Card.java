@@ -12,6 +12,8 @@ public class Card {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String name;
+    private int result;
     private ArrayList<String> benefits = new ArrayList<>();
 
 
@@ -21,6 +23,20 @@ public class Card {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {this.name = name;}
+
+    public int getResult() {
+        return result;
+    }
+
+    public void setResult(int result) {
+        this.result = result;
     }
 
     public ArrayList getBenefits() { return benefits; }
