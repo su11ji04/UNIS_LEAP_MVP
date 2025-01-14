@@ -1,63 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Homepage</title>
+    <title>혜택나우</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, sans-serif !important;
             margin: 0;
-            padding: 0;
             background-color: #f4f4f9;
             color: #333;
         }
         header {
-            background: #4CAF50;
-            color: white;
-            padding: 1rem;
-            text-align: center;
+            background: #f4f4f9;
+            color: #027bd6;
+            padding-left: 55px;
+            text-align: left;
+            font-size: 25px;
+            margin: 0;
+        }
+        #logo h1 {
+            font-family: Arial, sans-serif !important;
+            color: #027bd6;
+        }
+        .no-underline {
+            text-decoration: none;
         }
         nav {
-            text-align: center;
-            margin: 1rem 0;
+            padding-left: 20px;
+            display: flex !important;
+            text-align: left;
+            margin: 0;
+            position: relative; /* relative로 설정하여 위치 조정 가능 */
+            top: -25px; /* 네비게이션 영역을 10px 위로 올림 */
         }
         nav a {
             text-decoration: none;
-            color: #4CAF50;
-            margin: 0 15px;
+            color: #027bd6;
+            margin: 0;
+
+        }
+        #menu > li {
+            list-style-type: none;
+            text-decoration: none;
+            float: left;
+            margin-right: 40px;
+            font-size: 25px;
+        }
+        nav a.us {
+            color: #222222;
+            font-weight: bold;
         }
         nav a:hover {
             text-decoration: underline;
         }
         section {
-            padding: 2rem;
+            padding: 3rem;
             text-align: center;
         }
+        hr {
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+        blockquote {
+            font-style: italic;
+            color: #555;
+            margin: 20px auto;
+            padding: 10px;
+            border-left: 4px solid #027bd6;
+            background-color: #f9f9f9;
+            max-width: 600px;
+        }
+
         footer {
             background: #333;
             color: white;
             text-align: center;
-            padding: 1rem;
+            padding: 10px;
             position: fixed;
             bottom: 0;
             width: 100%;
         }
+
     </style>
 </head>
 <body>
+
 <header>
-    <h1>Welcome to My Homepage</h1>
+    <div id="logo">
+        <a href="main.html" class="no-underline">
+            <h1> 혜택나우 </h1>
+        </a>
+    </div>
 </header>
+
 <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
+    <ul id="menu">
+        <li><a href="main.html" class="us">About US</a></li>
+        <li><a href="service.html" class="sv">Service Simulation</a></li>
+        <li><a href="member.html" class="mb">Member</a></li>
+    </ul>
 </nav>
+
 <section id="about">
-    <h2>About Us</h2>
-    <p>This is a simple homepage template. You can use it to get started quickly.</p>
+    <h1>혜택 나우</h1>
+    <p>혜택나우는 실시간 위치를 기반으로 주변 상점에서 최적의 카드 혜택을 추천하여 스마트한 결제 경험을 제공하는 서비스입니다. 이 서비스를 통해 사용자는 위치에 맞는 최적의 혜택을 쉽게 확인하고 활용할 수 있습니다.</p>
+    <blockquote>"최대 혜택을 실현하는 서비스, 혜택나우!"</blockquote>
 </section>
+
 <section id="services">
     <h2>Our Services</h2>
     <p>We offer web development, design, and consulting services to help bring your ideas to life.</p>
@@ -66,11 +117,11 @@
     <h2>Contact Us</h2>
     <p>Email us at: <a href="mailto:example@example.com">example@example.com</a></p>
 </section>
+
 <footer>
     &copy; 2025 Simple Homepage. All rights reserved.
 </footer>
-</head>
-<body>
 
 </body>
 </html>
+

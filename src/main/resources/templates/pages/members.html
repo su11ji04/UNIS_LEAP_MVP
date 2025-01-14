@@ -1,76 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Homepage</title>
+    <title>혜택나우</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, sans-serif !important;
             margin: 0;
-            padding: 0;
             background-color: #f4f4f9;
             color: #333;
         }
         header {
-            background: #4CAF50;
-            color: white;
-            padding: 1rem;
-            text-align: center;
+            background: #f4f4f9;
+            color: #027bd6;
+            padding-left: 55px;
+            text-align: left;
+            font-size: 25px;
+            margin: 0;
+        }
+        #logo h1 {
+            font-family: Arial, sans-serif !important;
+            color: #027bd6;
+        }
+        .no-underline {
+            text-decoration: none;
         }
         nav {
-            text-align: center;
-            margin: 1rem 0;
+            padding-left: 20px;
+            display: flex !important;
+            text-align: left;
+            margin: 0;
+            position: relative; /* relative로 설정하여 위치 조정 가능 */
+            top: -25px; /* 네비게이션 영역을 10px 위로 올림 */
         }
         nav a {
             text-decoration: none;
-            color: #4CAF50;
-            margin: 0 15px;
+            color: #027bd6;
+            margin: 0;
+
+        }
+        #menu > li {
+            list-style-type: none;
+            text-decoration: none;
+            float: left;
+            margin-right: 40px;
+            font-size: 25px;
+
         }
         nav a:hover {
             text-decoration: underline;
         }
-        section {
-            padding: 2rem;
-            text-align: center;
+        nav a.mb {
+            color: #222222;
+            font-weight: bold;
         }
+        section {
+            padding:0;
+            text-align: center;
+            top: -20px
+        }
+        .int{
+            margin-left: 55px;
+            text-align: left;
+        }
+        .int h3 {
+            font-size: 25px;
+        }
+        .int h1 {
+            font-size: 35px;
+        }
+        .team{
+            background-color: #f9f9f9;
+            margin: 0 500px 30px 55px;
+            padding: 15px;
+            border-radius: 8px;
+            width: 1100px;
+            text-align: left;
+            line-height: 1.5;
+            float: left;
+        }
+        .team-member {
+            background-color: #f9f9f9;
+            margin: 30px 90px 30px 55px;
+            padding: 15px;
+            border-radius: 8px;
+            width: 300px;
+            text-align: left;
+            float: left;
+
+        }
+        .team-member h3 {
+            color: #027bd6;
+            font-size: 20px;
+        }
+        .team-member p {
+            font-size: 17px;
+        }
+
         footer {
             background: #333;
             color: white;
             text-align: center;
-            padding: 1rem;
+            padding: 10px;
             position: fixed;
             bottom: 0;
             width: 100%;
+            left: -10px;
         }
     </style>
 </head>
 <body>
+
 <header>
-    <h1>Members</h1>
+    <div id="logo">
+        <a href="main.html" class="no-underline">
+            <h1> 혜택나우 </h1>
+        </a>
+    </div>
 </header>
 <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
+    <ul id="menu">
+        <li><a href="main.html" class="us">About US</a></li>
+        <li><a href="service.html" class="sv">Service Simulation</a></li>
+        <li><a href="member.html" class="mb">Member</a></li>
+    </ul>
 </nav>
-<section id="about">
-    <h2>About Us</h2>
-    <p>This is a simple homepage template. You can use it to get started quickly.</p>
+
+<section class="members">
+    <div class="int">
+        <h3>우리 팀을 소개합니다</h3>
+        <h1> 도약 </h1>
+    </div>
+
+    <div class="team">
+        <h3> 팀 도약은 독창성과 협력을 중심으로 한 창업팀입니다. <br>
+            1학기 해커톤 행사에서 결성된 이후 팀원 간 창업 지향 가치가 동일하고 업무 스타일이 잘 맞다고 생각하여 2학기 실전 창업까지 함께 하게 되었습니다. <br>
+            저희 팀은 성실함을 바탕으로 각자의 강점을 살리고, 서로의 의견에 귀 기울이며 창업 과정에서 발생하는 다양한 문제를 해결해오고 있습니다.
+        </h3>
+    </div>
 </section>
-<section id="services">
-    <h2>Our Services</h2>
-    <p>We offer web development, design, and consulting services to help bring your ideas to life.</p>
+
+<section>
+    <div class="team-member">
+        <h3>권이룸 (2323008) - 팀장</h3>
+        <p><b>디자인</b>, 기획</p>
+    </div>
+
+    <div class="team-member">
+        <h3>최수윤 (2384027)</h3>
+        <p><b>기획</b>, 개발</p>
+    </div>
+
+    <div class="team-member">
+        <h3>성윤아 (2388017)</h3>
+        <p><b>기획</b>, 디자인, 개발</p>
+    </div>
+
+    <div class="team-member">
+        <h3>손미소 (2449053)</h3>
+        <p><b>개발</b>, 기획</p>
+    </div>
+
+    <div class="team-member">
+        <h3>한수지 (2176400)</h3>
+        <p><b>개발</b>, 기획</p>
+    </div>
 </section>
-<section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email us at: <a href="mailto:example@example.com">example@example.com</a></p>
-</section>
+
 <footer>
     &copy; 2025 Simple Homepage. All rights reserved.
 </footer>
-</head>
-<body>
 
 </body>
 </html>
