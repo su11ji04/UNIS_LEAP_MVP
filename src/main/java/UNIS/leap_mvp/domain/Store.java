@@ -1,8 +1,5 @@
 package UNIS.leap_mvp.domain;
 
-import jakarta.persistence.Entity;
-
-@Entity
 public class Store {
     private String type;
 
