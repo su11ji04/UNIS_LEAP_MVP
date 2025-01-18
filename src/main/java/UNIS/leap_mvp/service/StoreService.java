@@ -2,9 +2,12 @@ package UNIS.leap_mvp.service;
 
 import UNIS.leap_mvp.domain.Store;
 import UNIS.leap_mvp.repository.StoreRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
+@Transactional
 public class StoreService {
     private final StoreRepository storeRepository;
 
@@ -21,18 +24,13 @@ public class StoreService {
     private void validateDuplicateStore(Store store) {
         storeRepository.findByType(store.getType())
                 .ifPresent(existingStore -> {
-                    throw new IllegalStateException("이미 존재하는 가게입니다: " + existingStore.getType());
+                    throw new IllegalStateException("이미 존재하는 타입의 가게 입니다");
                 });
     }
 
-    public List<Store> findAll() {
-        return storeRepository.findAll();
-    }
+    public List<Store> findAll() { return storeRepository.findAll(); }
 
-    public Store findByType(String type) {
-        return storeRepository.findByType(type)
-                .orElseThrow(() -> new IllegalStateException("해당 타입의 가게가 존재하지 않습니다: " + type));
-    }
+    public Optional<Store> findByType(String type) { return storeRepository.findByType(type); }
 
 }
 /*
