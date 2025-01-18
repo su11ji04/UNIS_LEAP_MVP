@@ -53,3 +53,20 @@ public class Card {
         this.benefits = benefits;
     }
 }
+/*
+* -- 메인 테이블
+CREATE TABLE CARD (
+    ID BIGINT AUTO_INCREMENT PRIMARY KEY,   -- 카드 고유 ID
+    NAME VARCHAR(255) NOT NULL,             -- 카드 이름
+    RESULT INT                              -- 결과 값
+);
+
+-- 컬렉션 테이블
+CREATE TABLE CARD_BENEFITS (
+    CARD_ID BIGINT NOT NULL,                -- CARD 테이블과의 외래키 관계
+    BENEFIT INT NOT NULL,                   -- 혜택 값
+    PRIMARY KEY (CARD_ID, BENEFIT),         -- 복합 기본키로 유니크 보장
+    CONSTRAINT FK_CARD_BENEFITS FOREIGN KEY (CARD_ID) REFERENCES CARD(ID) ON DELETE CASCADE
+);
+
+* */
