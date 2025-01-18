@@ -55,6 +55,64 @@
             color: #222222;
             font-weight: bold;
         }
+        #text {
+            width: 100%;    /* 너비 */
+            height: 100px;  /* 높이 */
+            padding-left: 55px;
+            font-size: 20px;
+        }
+        #text p {
+            padding-left: 20px;
+            position : relative;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background-color: #333;
+            width: 90%; /* 구분선 길이 (화면의 50%) */
+            margin: 30px 20px;
+        }
+
+        #img {
+            display: flex;
+            gap : 500px;
+            align-items: center; /* 세로 정렬 */
+            justify-content: center; /* 가로 정렬: 가운데로 배치 */
+
+        }
+        #img div {
+            text-align: center; /* 텍스트를 가운데 정렬 */
+            background-color: #ffffff;
+            border-radius: 4px;
+            width: 300px;
+            height : 500px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            top : 30px
+
+        }
+
+        .hd img{
+            width: 200px;
+            height: 320px;
+            padding-top: 20px;
+
+        }
+        .nori img{
+            width: 200px;
+            height: 320px;
+            padding-top: 20px;
+        }
+        .roka img {
+            width: 205px;
+            height: 324px;
+            padding-top: 20px;
+        }
+        #map {
+            height: 200px;
+            width: 100%;
+        }
         footer {
             background: #333;
             color: white;
@@ -83,11 +141,45 @@
         <li><a href="/members" class="mb">Member</a></li>
     </ul>
 </nav>
+<section id="text">
+    <p> 혜택나우는 사용자의 실시간 위치에 맞춰 최대 혜택 카드 정보를 제공합니다. <br>
+        사용자의 위치 주변의 지도에서 상점을 선택하면 사용자가 가진 카드 중 최대 혜택을 받을 수 있는 카드를 추천합니다. <br>
+        또한 타 지도앱과 연동하여 사용자가 검색한 장소에서 최대 혜택을 받을 수 있는 카드를 알림으로 제공합니다. <hr>
+    </p>
+</section>
+
+<section id="img">
+    <div>
+        <h2 style="align-items: center;"> 사용자 소유 카드 </h2>
+    </div>
+
+    <div class="hd">
+        <img src="https://raw.githubusercontent.com/su11ji04/UNIS_LEAP_MVP/master/src/main/resources/image/hd.png" alt="현대카드Z family">
+            <p> <b>현대카드Z family</b> <br> <br> 전월 실적 : 50만원 <br> 주유 10% 할인 </p>
+    </div>
+
+    <div class="nori">
+        <img src="https://raw.githubusercontent.com/su11ji04/UNIS_LEAP_MVP/master/src/main/resources/image/nori2.png" alt="노리카드">
+            <p> <b>노리카드</b><br> <br> 전월 실적 : 20만원 <br> 영화관 35% 할인 <br> 스타벅스 20% 할인 </p>
+    </div>
+
+    <div class="roka">
+        <img src="https://raw.githubusercontent.com/su11ji04/UNIS_LEAP_MVP/master/src/main/resources/image/dgroka2.jpeg" alt="디지로카 london">
+        <p> <b>디지로카 london</b> <br><br> 전월 실적 : 10만원 <br> 마트 10% 할인 </p>
+    </div>
+
+</section>
+
+<section id="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1841.8917876145842!2d126.94077813965427!3d37.56049675613121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c98902693df25%3A0x875f6d5e69613750!2zU0vsl5TtgazrprAg7ZaJ7LSM7KCcMuyjvOycoOyGjA!5e0!3m2!1sko!2skr!4v1737182527871!5m2!1sko!2skr"
+            width="800" height="600" style=" margin: 100px; border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+
 
 <footer>
-    &copy; 2025 Simple Homepage. All rights reserved.
+    &copy; 2025 혜택나우. All rights reserved.
 </footer>
-
 
 
 
