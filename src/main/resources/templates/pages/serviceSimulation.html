@@ -73,24 +73,43 @@
             width: 90%; /* 구분선 길이 (화면의 50%) */
             margin: 30px 20px;
         }
+        section h1 {
+            font-size: 30px;
+        }
 
         #img {
             display: flex;
             gap : 120px;
             align-items: center; /* 세로 정렬 */
             justify-content: center; /* 가로 정렬: 가운데로 배치 */
+            position: relative;
 
         }
         #img div {
             text-align: center; /* 텍스트를 가운데 정렬 */
             background-color: #ffffff;
-            border-radius: 4px;
+            border-radius: 8px;
             width: 300px;
             height : 500px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             position: relative;
-            top : 30px
-
+            top : 10px
+        }
+        button {
+            position: relative;
+            height: 100%;  /* 이미지 높이에 맞추기 */
+            top: 0;
+            border: none;  /* 테두리 없이 */
+            padding: 20px;
+            background-color: transparent;  /* 투명한 배경 지정 */
+            color: #000;                    /* 화살표를 검은색으로 지정 */
+            font-weight: 1000;               /* 화살표를 굵게 지정 */
+            font-size: 50px;                /* 화살표 크기 지정 */
+            opacity: 0.8;                   /* 화살표를 반투명하게 지정 */
+        }
+        button:hover {
+            outline: 1px solid black; /* 커서를 올렸을 때 파란색 외곽선 */
+            cursor: pointer;
         }
 
         .hd img{
@@ -110,9 +129,67 @@
             padding: 20px;
         }
         #map {
+            display: flex; /* 지도와 output을 가로로 배치 */
+            gap: 20px; /* 지도와 output 간격 */
             height: 200px;
             width: 100%;
         }
+        iframe {
+            margin: 80px;
+            border:0;
+            width: 800px;
+            height: 600px
+        }
+        .loc {
+            margin-top: 60px;
+        }
+
+        .loc h2{
+            background-color: #f9f9f9;
+            margin: 30px 90px 30px 0px;
+            padding: 15px;
+            border-radius: 8px;
+            width: 300px;
+            text-align: left;
+        }
+
+        .loc label {
+            display: flex;
+            align-items: flex-start; /* 텍스트와 output이 위쪽 정렬 */
+            gap: 20px; /* 텍스트와 output 사이 간격 */
+            cursor: pointer;
+        }
+
+        .output {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+            background-color: #ffffff;
+            border-radius: 8px;
+            width: 300px;
+            height : 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
+        }
+        .output img {
+            width: 150px;
+            height: auto;
+            padding: 20px;
+        }
+        .output p {
+            font-size: 15px;
+            color: black;
+        }
+        input[type="radio"] {
+            display: none;
+        }
+
+        input[type="radio"]:checked + label > .output {
+            display: block;
+        }
+
+
         footer {
             background: #333;
             color: white;
@@ -141,6 +218,7 @@
         <li><a href="/members" class="mb">Member</a></li>
     </ul>
 </nav>
+
 <section id="text">
     <p> 혜택나우는 사용자의 실시간 위치에 맞춰 최대 혜택 카드 정보를 제공합니다. <br>
         사용자의 위치 주변의 지도에서 상점을 선택하면 사용자가 가진 카드 중 최대 혜택을 받을 수 있는 카드를 추천합니다. <br>
@@ -148,11 +226,10 @@
     </p>
 </section>
 
-<section id="img">
-    <div>
-        <h2 style="align-items: center;"> 사용자 소유 카드 </h2>
-    </div>
+<section><h1 style="align-items: center;margin-left: 70px;margin-top: 30px"> 사용자 소유 카드 </h1></section>
 
+<section id="img">
+    <button id="prev">&lang;</button>
     <div class="hd">
         <img src="https://raw.githubusercontent.com/su11ji04/UNIS_LEAP_MVP/master/src/main/resources/image/hd.png" alt="현대카드Z family">
             <p> <b>현대카드Z family</b> <br> <br> 전월 실적 : 50만원 <br> 주유 10% 할인 </p>
@@ -167,24 +244,59 @@
         <img src="https://raw.githubusercontent.com/su11ji04/UNIS_LEAP_MVP/master/src/main/resources/image/dgroka2.jpeg" alt="디지로카 london">
         <p> <b>디지로카 london</b> <br><br> 전월 실적 : 10만원 <br> 마트 10% 할인 </p>
     </div>
-
+    <button id="next">&rang;</button>
 </section>
 
 <section id="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1841.8917876145842!2d126.94077813965427!3d37.56049675613121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c98902693df25%3A0x875f6d5e69613750!2zU0vsl5TtgazrprAg7ZaJ7LSM7KCcMuyjvOycoOyGjA!5e0!3m2!1sko!2skr!4v1737182527871!5m2!1sko!2skr"
-            width="800" height="600" style=" margin: 100px; border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="map-container" id="maparea">
+        <iframe id="ifarea" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4860.859628207689!2d126.94631862741352!3d37.55930363215661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c988459902d69%3A0xf2536b3850f9d80d!2z7J207ZmU7Jes7J6Q64yA7ZWZ6rWQ!5e0!3m2!1sko!2skr!4v1737295817484!5m2!1sko!2skr"
+           allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="loc">
+        <h1>주변 상점 목록</h1>
+
+        <input type="radio" id="loc1" name="stbs">
+        <label for="loc1">
+            <h2 class="sb"> 스타벅스 이대 ecc점</h2>
+            <div class="output" id="opbox1">
+                <img src="https://raw.githubusercontent.com/su11ji04/UNIS_LEAP_MVP/master/src/main/resources/image/nori2.png" alt="노리카드">
+                <p> <b>스타벅스 이대ecc점 </b>에서는<br> 노리카드로 결제하는 것을 추천합니다. <br><br> 혜택 : 20% 할인 <br> 전월 실적 만족 여부 : 만족 </p>
+            </div>
+        </label>
+
+        <input type="radio" id="loc2" name="stbs">
+        <label for="loc2">
+            <h2 class="mb"> 메가박스 신촌점</h2>
+            <div class="output" id="opbox2">
+             <img src="https://raw.githubusercontent.com/su11ji04/UNIS_LEAP_MVP/master/src/main/resources/image/dgroka2.jpeg" alt="디지로카 london">
+             <p> <b>메가박스 신촌점</b>에서는 <br> 디지로카 london으로 결제하는 것을 추천합니다. <br><br> 혜택 : 10% 할인 <br> 전월 실적 만족 여부 : 만족 </p>
+            </div>
+        </label>
+
+        <input type="radio" id="loc3" name="stbs">
+        <label for="loc3">
+            <h2 class="sk"> SK엔크린 행촌제2주유소 </h2>
+            <div class="output" id="opbox3">
+                <img src="https://raw.githubusercontent.com/su11ji04/UNIS_LEAP_MVP/master/src/main/resources/image/hd.png" alt="현대카드Z family">
+                <p> <b> SK엔크린 행촌제2주유소</b>에서는 <br> 현대카드Z family로 결제하는 것을 추천합니다. <br><br> 혜택 : 10% 할인 <br> 전월 실적 만족 여부 : 만족 </p>
+            </div>
+        </label>
+
+        <h2 class="hm"> 하모니마트 이대역점</h2>
+
+    </div>
+
 </section>
 
+<section>
+    <div style="height: 1000px;"></div>
+</section>
 
 
 <footer>
     &copy; 2025 혜택나우. All rights reserved.
 </footer>
-
-
-
-
-
 
 </body>
 </html>
