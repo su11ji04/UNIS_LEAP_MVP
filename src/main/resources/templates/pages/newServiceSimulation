@@ -145,7 +145,6 @@
       border-radius: 8px;
       width: 170px;
       text-align: center;
-      float: left;
       outline: 1px solid #8c8989;
     }
 
@@ -155,8 +154,8 @@
       text-align: left;
       background-color: #ffffff;
       border-radius: 8px;
-      width: 1400px;
-      height : 600px;
+      width: 1200px;
+      height : 700px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       margin: 0 auto; /* 가운데 정렬 */
       top: 30px
@@ -164,14 +163,17 @@
     }
     .output img {
       padding: 10px;
-      margin: 50px;
+      margin: 0px 50px 0px 50px;
       float: left;
       align-items: center;
       justify-content: center; /* 가로로 중앙 정렬 */
 
     }
     .output p {
-      font-size: 15px;
+      float: left;
+      padding: 10px;
+      margin: 40px;
+      font-size: 18px;
       color: black;
     }
     input[type="radio"] {
@@ -251,6 +253,7 @@
       <h2 class="loc"> 카페 </h2>
     </label>
     <div class="output" id="opbox1">
+      <p> 수업이 끝난 화연이는 친구들과 카페에 가려고 한다. 화연이는 주변에 있는 카페에 갈 때 어떤 카드로 결제해야 가장 저렴한지 궁금하다. </p>
       <img style="width: 600px; height: auto;" src="https://raw.githubusercontent.com/su11ji04/UNIS_LEAP_MVP/master/src/main/resources/image/sb.png" alt="스타벅스">
       <img style="width: 200px; height: auto;" src="https://raw.githubusercontent.com/su11ji04/UNIS_LEAP_MVP/master/src/main/resources/image/nori2.png" alt="노리카드">
       <p> <b>스타벅스 이대ecc점 </b>에서는<br> 노리카드로 결제하는 것을 추천합니다. <br><br> 혜택 : 20% 할인 <br> 전월 실적 만족 여부 : 만족 </p>
@@ -263,6 +266,7 @@
       <h2 class="loc"> 영화관 </h2>
     </label>
     <div class="output" id="opbox2">
+      <p> 영화를 보는 것이 취미인 화연이는 수업이 끝나면 영화관에 가곤 한다. 화연이는 주변에 있는 영화관에 갈 때 어떤 카드로 결제해야 가장 저렴한지 궁금하다. </p>
       <img style="width: 600px; height: auto;" src="https://raw.githubusercontent.com/su11ji04/UNIS_LEAP_MVP/master/src/main/resources/image/megabox.png" alt="메박">
       <img style="width: 200px; height: auto;" src="https://raw.githubusercontent.com/su11ji04/UNIS_LEAP_MVP/master/src/main/resources/image/nori2.png" alt="노리카드">
       <p> <b>메가박스 신촌점</b>에서는 <br> 노리카드로 결제하는 것을 추천합니다. <br><br> 혜택 : 35% 할인 <br> 전월 실적 만족 여부 : 만족 </p>
@@ -275,6 +279,7 @@
       <h2 class="loc"> 주유소 </h2>
     </label>
     <div class="output" id="opbox3">
+      <p> 자차로 통학을 하고 있는 화연이는 집에 가는 길에 주유를 하려고 한다. 화연이는 주변에 있는 주유소에 갈 때 어떤 카드로 결제해야 가장 저렴한지 궁금하다. </p>
       <img style="width: 600px; height: auto;" src="https://raw.githubusercontent.com/su11ji04/UNIS_LEAP_MVP/master/src/main/resources/image/sk.png" alt="주유소">
       <img style="width: 200px; height: auto;" src="https://raw.githubusercontent.com/su11ji04/UNIS_LEAP_MVP/master/src/main/resources/image/hd.png" alt="현대카드Z family">
       <p> <b> SK엔크린 행촌제2주유소</b>에서는 <br> 현대카드Z family로 결제하는 것을 추천합니다. <br><br> 혜택 : 10% 할인 <br> 전월 실적 만족 여부 : 만족 </p>
@@ -287,9 +292,10 @@
       <h2 class="loc"> 마트 </h2>
     </label>
     <div class="output" id="opbox4">
-    <img style="width: 600px; height: auto;" src="https://raw.githubusercontent.com/su11ji04/UNIS_LEAP_MVP/master/src/main/resources/image/mart.png" alt="마트">
-    <img style="width: 200px; height: auto;" src="https://raw.githubusercontent.com/su11ji04/UNIS_LEAP_MVP/master/src/main/resources/image/dgroka2.jpeg" alt="디지로카 london">
-    <p> <b> 하모니마트 이대역점 </b>에서는 <br> 디지로카 london으로 결제하는 것을 추천합니다. <br><br> 혜택 : 10% 할인 <br> 전월 실적 만족 여부 : 만족 </p>
+      <p> 학교 주변에서 자취를 하고 있는 화연이는 식료품을 사기 위해 마트에 자주 간다. <br>화연이는 주변에 있는 마트에 갈 때 어떤 카드로 결제해야 가장 저렴한지 궁금하다. </p>
+      <img style="width: 600px; height: auto;" src="https://raw.githubusercontent.com/su11ji04/UNIS_LEAP_MVP/master/src/main/resources/image/mart.png" alt="마트">
+      <img style="width: 200px; height: auto;" src="https://raw.githubusercontent.com/su11ji04/UNIS_LEAP_MVP/master/src/main/resources/image/dgroka2.jpeg" alt="디지로카 london">
+      <p> <b> 하모니마트 이대역점 </b>에서는 <br> 디지로카 london으로 결제하는 것을 추천합니다. <br><br> 혜택 : 10% 할인 <br> 전월 실적 만족 여부 : 만족 </p>
     </div>
   </div>
 </section>
